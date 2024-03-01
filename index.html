@@ -6,60 +6,73 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/output.css">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
-<body>
+<body class="font-space font-medium">
 
-  <div>
+  <div class="bg-mainMobile bg-cover bg-no-repeat bg-center text-white h-60 w-[375px] mb-[90px] relative">
     <!-- Card Front -->
-    <div>
-      <img src="./images/card-logo.svg" alt="Card Logo">
-      <span>0000 0000 0000 0000</span>
-      <div>
-        <span>Jane Appleseed</span>
+    <div class="bg-cardFront bg-cover bg-no-repeat bg-center w-[286px] h-[158px] rounded-lg p-5 absolute top-[120px] left-4 z-10">
+      <img class="w-[54px] mb-9" src="./images/card-logo.svg" alt="Card Logo">
+      <span class="text-lg tracking-widest block mb-4">0000 0000 0000 0000</span>
+      <div class="text-[10px] flex justify-between">
+        <span>JANE APPLESEED</span>
         <span>00/00</span>
       </div>
     </div>
 
     <!-- Card Back -->
-    <div>
-      <span>000</span>
+    <div class="bg-cardBack bg-cover bg-no-repeat bg-center w-[286px] h-[158px] rounded-lg absolute top-8 right-4">
+      <span class="absolute top-[70px] right-[38px] text-[10px]">000</span>
     </div>
   </div>
 
   <!-- Form -->
-  <section>
+  <section class="w-[375px] px-6 grid gap-6">
+
+    <!-- Cardholder Name -->
     <div>
-      <label for="name">Cardholder Name</label>
-      <input type="text" id="name" placeholder="e.g. Jane Appleseed">
+      <label for="name" class="text-veryDarkViolet mb-3">CARDHOLDER NAME</label>
+      <input type="text" id="name" placeholder="e.g. Jane Appleseed" class="border border-lightGrayishViolet rounded-md h-[46px] w-full">
     </div>
 
+    <!-- Card Number -->
     <div>
-      <label for="cardNumber">Card Number</label>
-      <input type="number" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+      <label for="cardNumber" class="text-veryDarkViolet mb-3">CARD NUMBER</label>
+      <input type="number" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" class="border border-lightGrayishViolet rounded-md h-[46px] w-full">
     </div>
 
-    <div>
+    
+    <div class="flex gap-3">
+
+      <!-- Exp. Date -->
       <div>
-        <label for="">Exp. Date (MM/YY)</label>
-        <input type="number" id="date" placeholder="MM">
-        <input type="number" id="date" placeholder="YY">
+        <label for="" class="text-veryDarkViolet mb-3">EXP. DATE (MM/YY)</label>
+
+        <div class="flex gap-2">
+          <input type="number" id="date" placeholder="MM" class="border border-lightGrayishViolet rounded-md h-[46px] w-[72px]">
+          <input type="number" id="date" placeholder="YY" class="border border-lightGrayishViolet rounded-md h-[46px] w-[72px]">
+        </div>
       </div>
     
+      <!-- CVC -->
       <div>
         <label for="cvc">CVC</label>
-        <input type="number" id="cvc" placeholder="e.g. 123">
+        <input type="number" id="cvc" placeholder="e.g. 123" class="border border-lightGrayishViolet rounded-md h-[46px] w-[163px]">
       </div>
     </div>
 
-    <button>Confirm</button>
+    <button class="bg-veryDarkViolet text-white w-[327px] h-[54px] mb-11 rounded-lg">Confirm</button>
   </section>
 
 
   <!-- Completed state start -->
 
-  <section>
+  <section class="hidden">
     <img src="./images/icon-complete.svg" alt="Check Icon">
 
     <div>
